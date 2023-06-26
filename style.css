@@ -1,0 +1,341 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #20262E;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    color: #28D07E;
+    background-color: #20262E;
+    position: fixed;
+    z-index: 999999999999999999;
+    top: 0;
+}
+header nav{
+    display: flex;
+}
+nav ul{
+    display: flex;
+    gap: 6rem;
+    list-style: none;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size:.9em;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.logo span{
+    color: white;
+    font-family: monospace;
+}
+nav ul li a{
+    color: #28D07E;
+}
+.Hero_section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.title p{
+    word-spacing: 10px;
+    font-family: monospace;
+}
+.Hero_section .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+    padding: 5px;
+    width: 50%;
+    margin-left: 2rem;
+}
+.basket button{
+    padding: 6px;
+    border-radius: 50%;
+    border: none;
+}
+
+button:active{
+    transform: scale(1.04);
+}
+.price_and_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price_and_btn button{
+    border: none;
+    padding: 7px;
+    border-radius: 50%;
+    color: #20262E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28D07E;
+}
+.price_and_btn h6{
+    font-size: 1rem;
+}
+
+.content button{
+    padding: 6px;
+    border: none;
+    color: #28D07E;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 40%;
+    background-color: #4444;
+    font-family: monospace;
+    letter-spacing: 4px;
+}
+.content button:hover{
+    background-color: #28D07E;
+    color: white;
+}
+
+.title h1{
+    color: #28D07E;
+}
+img{
+    object-fit: cover;
+}
+.E_shop{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+     flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+.content p{
+    letter-spacing: 2px;
+}
+.E_shop .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+}
+.card:hover{
+    background-color: #20262E;
+    color: #fff;
+}
+.card .info{
+    padding: 10px;
+}
+.card .img img{
+    width: 100%;
+}
+
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    gap: 2rem;
+}
+.about_title{
+    text-align: center;
+    font-family: sans-serif;
+}
+.about .about_content{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about .img_container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2,200px);
+}
+.img_container img{
+    border: solid #28D07E;
+}
+.img_container img:hover{
+    transform: scale(1.05) rotate(-9deg);
+     transition:.6s ease
+}
+.card .info {
+    letter-spacing: -0.05;
+    padding: 1em;
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: #fff;
+    gap: 10px;
+}
+footer ul{
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+footer li a{
+    color:#20262E ;
+    text-decoration:none
+}
+footer .social ul li a{
+
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    
+}
+
+
+@media (width <= 414px){
+    .Hero_section{
+        display: grid;
+        width: 100%;
+        place-items: center;
+    }
+    .Hero_section .content{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        place-items: center;
+        margin-top: 10rem;
+        
+    }
+    .card .info{
+        font-size: 20px;
+        width: 48%;
+    }
+    .pic img {
+        width: 400px;
+        
+    }
+    .E_shop{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1,170px);
+    }
+    header nav{
+        display: none;
+      
+    }
+    header{
+        justify-content: space-between;
+    }
+    .about{
+        display: grid;
+        place-items: center;
+    }
+    .about .about_content{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about .about_content p{
+        padding: 10px;
+    }
+}
+
+@media (width <= 884px){
+    .Hero_section{
+        display: grid;
+        width: 100%;
+        place-items: center;
+    }
+    .Hero_section .content{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        place-items: center;
+        margin-top: 10rem;
+        font-size: 2rem;
+    }
+   
+    .content button{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .pic img {
+        width: 400px;
+        
+    }
+    .E_shop{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1,800px);
+        font-size: 2rem;
+    }
+     .info{
+       width: 100%;
+       font-size: 1.5rem;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+}
+
+
+@media (width <= 761px){
+    .Hero_section{
+        display: grid;
+        width: 100%;
+        place-items: center;
+    }
+    .Hero_section .content{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        place-items: center;
+        margin-top: 10rem;
+        font-size: 2rem;
+    }
+    .content button{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .pic img {
+        width: 400px;
+        
+    }
+    .E_shop{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1,800px);
+        font-size: 2rem;
+    }
+     .info{
+       width: 100%;
+       font-size: 1.5rem;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+}
